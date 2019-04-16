@@ -15,6 +15,7 @@ class RenameNameToUsername extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->renameColumn('name', 'username');
+            $table->unique('username');
         });
     }
 
