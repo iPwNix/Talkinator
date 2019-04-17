@@ -39,19 +39,19 @@ main {
         color: $soft-grey-transp;
     }
     .dropdown-menu{
-        background: #3a3a53;
+        background: $dark-purple;
         color: $dark-grey;
         .dropdown-item{
             &:hover{
                 color: $soft-grey;
-                background: #313147;
+                background: $darker-purple;
             }
         }
     }
 
     transition: all .2s ease;
     &:hover{
-        background: #3a3a53;
-        border-bottom: 1px solid #313147;
+        background: $dark-purple;
+        border-bottom: 1px solid $darker-purple;
     }
 }
