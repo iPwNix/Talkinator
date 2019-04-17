@@ -70,11 +70,11 @@ class ProfileController extends Controller
     {
 
         $this->validate($request, [
-            'new_avatar' => 'mimes:jpeg,jpg,png|required|max:10240'
+            'new_avatar' => 'mimes:jpeg,jpg,png|required|dimensions:max_width=500,max_height=500|max:5120'
         ]);
 
-        $uploadedImage = $uploadRepository->upload_image_resize($request->new_avatar, '\users\avatars', 200, 200);
-
+        $uploadedImage = $uploadRepository->upload_image($request->new_avatar, '\users\avatars');
+        
         $profile = Profile::where('user_id', Auth::user()->id)->first();
         $uploadRepository->delete_old_image($profile->avatar, '\users\avatars');
 
@@ -100,10 +100,9 @@ class ProfileController extends Controller
     public function updateCover($username, Request $request, UploadRepository $uploadRepository)
     {
         $this->validate($request, [
-            'new_cover' => 'mimes:jpeg,jpg,png|required|max:10240'
+            'new_cover' => 'mimes:jpeg,jpg,png|required|dimensions:max_width=3000,max_height=900|max:10240'
         ]);
 
-        //$uploadedImage = $uploadRepository->upload_image_resize($request->new_cover, '\users\avatars', 200, 200);
         $uploadedImage = $uploadRepository->upload_image($request->new_cover, '\users\covers');
 
         $profile = Profile::where('user_id', Auth::user()->id)->first();

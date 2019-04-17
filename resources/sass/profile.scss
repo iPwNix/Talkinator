@@ -1,0 +1,76 @@
+body.profile {
+    main {
+        padding-top: 0;
+
+        .profile-cover-row {
+            width: 100%;
+            height: 400px;
+
+            .profile-cover-col {
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .cover-darken-overlay {
+                position: absolute;
+                width: 100%;
+                height: 400px;
+                top: 0;
+                background: rgba(0, 0, 0, 0.4);
+            }
+
+            .cover-bio-container {
+                position: relative;
+                height: 150px;
+                bottom: 175px;
+
+                .cover-info {
+                    .cover-avatar {
+                        width: 150px;
+                        height: 150px;
+                        float: left;
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        border-radius: 35px;
+                    }
+
+                    .cover-bio {
+                        height: 150px;
+                        float: left;
+                        margin-left: 35px;
+                        padding-top: 37.5px;
+                        font-weight: bold;
+                        color: $soft-white;
+
+                        .cover-username {
+                            font-size: 2.5rem;
+                        }
+
+                        .cover-edit-btn {
+                            display: block;
+                            width: 100%;
+                            margin-top: 20px;
+                            background: rgba(255, 255, 255, .2);
+                            padding: 8px 40px;
+                            border-radius: 8px;
+                            border: 1px solid rgba(255, 255, 255, .2);
+                            text-decoration: none;
+                            color: $soft-white;
+                            transition: all .2s ease;
+
+                            &:hover {
+                                color: $dark-grey;
+                                background: rgba(255, 255, 255, 1);
+                                box-shadow: 0 0 30px rgba(0, 0, 0, .8);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
