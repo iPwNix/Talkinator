@@ -89,5 +89,9 @@
         @yield('content')
     </main>
 </div>
+<!-- Common Scripts -->
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+
+@yield('specific_scripts')
 </body>
 </html>

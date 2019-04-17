@@ -19,3 +19,8 @@
         </div>
     </div>
 @endsection
+
+
+@section('specific_scripts')
+    <script src="{{ asset('js/profile.js') }}"></script>
+@stop
