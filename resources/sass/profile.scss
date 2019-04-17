@@ -81,6 +81,11 @@ body.profile {
                         padding: 10px 20px;
                         border-left: 1px solid $darker-purple;
                         border-right: 1px solid $darker-purple;
+                        text-decoration: none;
+                        color: $soft-grey-transp;
+                        &:hover{
+                            color: $soft-grey;
+                        }
                     }
                 }
             }
