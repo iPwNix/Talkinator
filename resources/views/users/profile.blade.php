@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['body_class' => 'profile'])
 
 @section('content')
     <div class="container">
