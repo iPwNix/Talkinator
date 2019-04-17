@@ -72,5 +72,18 @@ body.profile {
                 }
             }
         }
+        .profile-nav{
+            .container{
+                .nav{
+                    width: 100%;
+                    a{
+                        font-size: 1.2em;
+                        padding: 10px 20px;
+                        border-left: 1px solid $darker-purple;
+                        border-right: 1px solid $darker-purple;
+                    }
+                }
+            }
+        }
     }
 }

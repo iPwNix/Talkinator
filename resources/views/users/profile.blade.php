@@ -22,6 +22,18 @@
                 </div>
             </div>
         </div>
+        <nav class="profile-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="nav">
+                        <a href="{{ $user->username }}/activity">Activity</a>
+                        <a href="{{ $user->username }}/threads">Threads</a>
+                        <a href="{{ $user->username }}/replies">Replies</a>
+                        <a href="{{ $user->username }}/comments">Comments</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </div>
 @endsection
 
